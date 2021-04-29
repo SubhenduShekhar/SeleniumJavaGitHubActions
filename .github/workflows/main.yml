@@ -11,17 +11,19 @@ jobs:
       # Installing google chrome
       - name: Install Google Chrome # Using shell script to install Google Chrome
       - run: |
-        chmod +x ./scripts/InstallChrome.sh
-        ./scripts/InstallChrome.sh
-      # Installing JDK 11
+            chmod +x ./scripts/InstallChrome.sh
+            ./scripts/InstallChrome.sh
+            - name: Grant execute permission for gradlew
+              run: chmod +x gradlew # give permission to Gradle to run the commands
+
       - name: Set up JDK 11
       - uses: actions/setup-java@v2
         with:
           java-version: '11'
           distribution: 'adopt'
-      # Building with Ant
+
       - name: Build with Ant
       - run: ant -noinput -buildfile build.xml
-      # Compiling and running with Ant
+
       - name: Compiling and running project
       - run: ant all
