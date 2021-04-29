@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="SeleniumJavaGitHubActions">
+    <property name="src" location="src"/>
+    <property name="build" location="build"/>
+    <target name="clean" description="Cleaning previous builds/ cache">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile" description="Compiling build...">
+        <mkdir dir="${build}/classes"/>
+        <javac classpath="libs/server.jar" destdir="${build}/classes" srcdir="${src}"/>
+    </target>
+
+    <target name="jar" description="Compilation successful. Creating JAR executable">
+        <mkdir dir="build/jar/libs/"/>
+        <copy file="libs/chromedriver.exe" tofile="build/jar/libs/chromedriver.exe"/>
+        <jar destfile="build/jar/build.jar" basedir="build/classes">
+            <zipgroupfileset dir="libs" includes="server.jar"/>
+            <manifest>
+                <attribute name="DependencyFinder" value="main"/>
+                <attribute name="Main-Class" value="com.company.Main"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" description="Running the build.">
+        <java jar="build/jar/HelloWorld.jar" fork="true"/>
+    </target>
+
+    <target name="all" description="Running all builds" depends="clean,compile,jar,run"/>
+
+</project>
