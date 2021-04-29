@@ -31,4 +31,4 @@ jobs:
         run: ant all
 
       - name: Checking...
-        run: cd build/jar/libs && ls -l
+        run: ls -l
