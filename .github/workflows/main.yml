@@ -24,13 +24,11 @@ jobs:
                   && sudo chmod +x /usr/local/bin/chromedriver \
                   && chromedriver --version
 
-      #- name: Checking build libs
-      #  run: ls -l
+      - name: Build with Ant
+        run: ant -noinput -buildfile build.xml
 
-      - name: Check file content
-        run: ls -l
-      #- name: Build with Ant
-      #  run: ant -noinput -buildfile build.xml
+      - name: Compiling and running project
+        run: ant all
 
-      #- name: Compiling and running project
-      #  run: ant all
+      - name: Checking...
+        run: cd build/jar/libs && ls -l

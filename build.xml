@@ -27,6 +27,6 @@
         <java jar="build/jar/build.jar" fork="true"/>
     </target>
 
-    <target name="all" description="Running all builds" depends="clean,compile,jar,run"/>
+    <target name="all" description="Running all builds" depends="clean,compile,jar"/>
 
 </project>
