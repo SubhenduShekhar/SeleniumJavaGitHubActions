@@ -24,8 +24,8 @@ jobs:
                   && sudo chmod +x /usr/local/bin/chromedriver \
                   && chromedriver --version
 
-      - name: Checking build libs
-        run: cd build/jar/libs
+      #- name: Checking build libs
+      #  run: ls -l
 
       - name: Check file content
         run: ls -l
