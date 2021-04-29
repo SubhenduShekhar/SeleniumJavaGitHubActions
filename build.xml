@@ -24,7 +24,7 @@
     </target>
 
     <target name="run" description="Running the build.">
-        <java jar="build/jar/HelloWorld.jar" fork="true"/>
+        <java jar="build/jar/build.jar" fork="true"/>
     </target>
 
     <target name="all" description="Running all builds" depends="clean,compile,jar,run"/>
