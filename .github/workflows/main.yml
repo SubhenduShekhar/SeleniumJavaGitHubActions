@@ -26,8 +26,9 @@ jobs:
 
       - name: Checking build libs
         run:cd build/jar/libs
+        
       - name: Check file content
-        run: ls -l
+        run:ls -l
       #- name: Build with Ant
       #  run: ant -noinput -buildfile build.xml
 
