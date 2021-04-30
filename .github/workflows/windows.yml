@@ -20,4 +20,5 @@ jobs:
         run: ant all
 
       - name: Running project
-        run: java -jar build.jar -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver/chromedriver.exe
+        run: cd build/jar
+          && java -jar build.jar -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver/chromedriver.exe
