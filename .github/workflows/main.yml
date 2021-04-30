@@ -27,8 +27,8 @@ jobs:
       - name: Build with Ant
         run: ant -noinput -buildfile build.xml
 
-      - name: Compiling and running project
+      - name: Compiling project
         run: ant all
 
-      - name: Checking...
-        run: ls -l
+      - name: Running project
+        run: cd build/jar && java -jar build.jar -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver/chromedriver

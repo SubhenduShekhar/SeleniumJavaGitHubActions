@@ -12,7 +12,7 @@ public class Components {
     protected void launchApp() {
         String path = Paths.get("").toAbsolutePath().toString();
         System.out.println("Current path: " + path);
-        System.setProperty("webdriver.chrome.driver", path.concat("\\libs\\chromedriver"));
+        /*System.setProperty("webdriver.chrome.driver", path.concat("\\libs\\chromedriver"));*/
         webDriver = new ChromeDriver();
         webDriver.get(TestData.url);
     }
