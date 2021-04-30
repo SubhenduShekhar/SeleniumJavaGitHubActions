@@ -1,5 +1,6 @@
 # SeleniumJavaGitHubActions
 
+## Specifications
 - Java
 - Selenium Standalone
 - Ant build
