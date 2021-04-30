@@ -34,4 +34,4 @@ jobs:
         run: cd build/jar/libs
           && ls -l
           && cd ..
-          && java -jar build.jar -Dwebdriver.chrome.driver=/home/runner/work/SeleniumJavaGitHubActions/SeleniumJavaGitHubActions/libs/chromedriver_linux
+          && java -jar build.jar -Dwebdriver.chrome.driver=/home/runner/work/SeleniumJavaGitHubActions/SeleniumJavaGitHubActions/build/jar/libs/chromedriver_linux
