@@ -1,4 +1,4 @@
-name: Selenium Java CI
+name: CI on Windows
 
 on: [push]
 
