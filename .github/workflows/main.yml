@@ -33,5 +33,5 @@ jobs:
       - name: Running project
         run: cd build/jar/libs
           && ls -l
-          cd ..
+          && cd ..
           && java -jar build.jar -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver/chromedriver
