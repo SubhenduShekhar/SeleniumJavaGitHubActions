@@ -1,2 +1,7 @@
 # SeleniumJavaGitHubActions
-Demo project for integrating selenium java with github actions
+
+- Java
+- Selenium Standalone
+- Ant build
+
+Check .github/workflows for UBUNTU and WINDOWS execution yml files
