@@ -14,6 +14,7 @@
     <target name="jar" description="Compilation successful. Creating JAR executable">
         <mkdir dir="build/jar/libs/"/>
         <copy file="libs/chromedriver.exe" tofile="build/jar/libs/chromedriver.exe"/>
+        <copy file="libs/chromedriver_linux" tofile="build/jar/libs/chromedriver_linux"/>
         <jar destfile="build/jar/build.jar" basedir="build/classes">
             <zipgroupfileset dir="libs" includes="server.jar"/>
             <manifest>
