@@ -2,8 +2,6 @@ name: CI on Linux
 
 on:
   push:
-  schedule:
-      - cron: '0 0 * * *'  # every day at midnight
 
 jobs:
   build:
